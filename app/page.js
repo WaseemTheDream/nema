@@ -345,6 +345,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── Backed By ─── */}
+      <section className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Backed by <span className="text-gradient">visionaries</span></h2>
+          <p className="text-gray-400 max-w-xl mx-auto">World-class investors who believe in the future of autonomous AI.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {[
+            {
+              name: 'Sarah Chen',
+              title: 'Partner, Sequoia Capital',
+              img: 'https://api.dicebear.com/7.x/personas/svg?seed=sarah&backgroundColor=b6e3f4',
+              quote: '"Nema is the infrastructure layer AI has been missing."',
+            },
+            {
+              name: 'joeVC',
+              title: 'Managing Partner, Disruption Ventures',
+              img: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=joevc&mouth=wideSmile&eyes=sparkle',
+              quote: '"I wrote my first check after the demo crashed 3 times. That\'s conviction."',
+              featured: true,
+            },
+            {
+              name: 'Priya Patel',
+              title: 'GP, Andreessen Horowitz',
+              img: 'https://api.dicebear.com/7.x/personas/svg?seed=priya&backgroundColor=c0aede',
+              quote: '"The agent coordination protocol is genuinely novel."',
+            },
+          ].map((investor, i) => (
+            <div key={i} className={`rounded-xl p-8 text-center transition-all duration-300 ${investor.featured ? 'bg-gradient-to-b from-yellow-500/10 to-orange-500/5 border-2 border-yellow-500/30 scale-105' : 'glass glass-hover'}`}>
+              {investor.featured && (
+                <div className="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-3 animate-pulse">⭐ Lead Investor ⭐</div>
+              )}
+              <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white/10" style={investor.featured ? { borderColor: 'rgba(234, 179, 8, 0.5)', boxShadow: '0 0 30px rgba(234, 179, 8, 0.2)' } : {}}>
+                <img src={investor.img} alt={investor.name} className="w-full h-full object-cover" />
+              </div>
+              <h3 className={`text-lg font-bold mb-1 ${investor.featured ? 'text-yellow-300' : 'text-white'}`}>{investor.name}</h3>
+              <p className="text-sm text-gray-400 mb-4">{investor.title}</p>
+              <p className="text-sm text-gray-300 italic leading-relaxed">{investor.quote}</p>
+              {investor.featured && (
+                <div className="mt-4 text-xs text-yellow-500/60 font-mono">Investment size: undisclosed (but he won&apos;t stop talking about it)</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ─── Waitlist ─── */}
       <section id="waitlist" className="relative z-10 max-w-2xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to <span className="text-gradient">orchestrate</span>?</h2>
