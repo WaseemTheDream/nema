@@ -356,20 +356,20 @@ export default function Home() {
             {
               name: 'Sarah Chen',
               title: 'Partner, Sequoia Capital',
-              img: 'https://api.dicebear.com/7.x/personas/svg?seed=sarah&backgroundColor=b6e3f4',
+              img: '/sarah-chen.png',
               quote: '"Nema is the infrastructure layer AI has been missing."',
             },
             {
               name: 'joeVC',
               title: 'Managing Partner, Disruption Ventures',
-              img: '/joevc.jpg',
+              img: '/joevc-generated.png',
               quote: '"I wrote my first check after the demo crashed 3 times. That\'s conviction."',
               featured: true,
             },
             {
               name: 'Priya Patel',
               title: 'GP, Andreessen Horowitz',
-              img: 'https://api.dicebear.com/7.x/personas/svg?seed=priya&backgroundColor=c0aede',
+              img: '/priya-patel.png',
               quote: '"The agent coordination protocol is genuinely novel."',
             },
           ].map((investor, i) => (
