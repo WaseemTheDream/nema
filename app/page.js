@@ -362,7 +362,7 @@ export default function Home() {
             {
               name: 'joeVC',
               title: 'Managing Partner, Disruption Ventures',
-              img: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=joevc&mouth=wideSmile&eyes=sparkle',
+              img: '/joevc.jpg',
               quote: '"I wrote my first check after the demo crashed 3 times. That\'s conviction."',
               featured: true,
             },
